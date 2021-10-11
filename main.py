@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+
 from PIL import ImageTk, Image
 
 root = Tk()
@@ -83,13 +84,12 @@ def up():
     img1_c.paste(img2, (dx, dy))
     change_img(img1_c)
 
+
 def save():
     global img1, img2, dx, dy
     img1_c = img1.copy()
     img1_c.paste(img2, (dx, dy))
     img1_c.save('Watermarked.jpg')
-
-
 
 
 panel = Label(root)
